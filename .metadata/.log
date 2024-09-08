@@ -1,0 +1,125 @@
+!SESSION 2024-09-08 10:13:20.834 -----------------------------------------------
+eclipse.buildId=4.32.0.20240606-1231
+java.version=22.0.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_IN
+Framework arguments:  plugins/lombok.jar -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 plugins/lombok.jar -product org.eclipse.epp.package.jee.product
+
+!ENTRY ch.qos.logback.classic 1 0 2024-09-08 10:13:25.658
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2024-09-08 10:15:07.419
+!MESSAGE Logback config file: /home/v2stech/Documents/CouponManagementSystem/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.6.1.20240411-1122.xml
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-09-08 10:17:57.037
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/coupon
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-09-08 10:17:58.998
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/coupon
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-09-08 10:18:01.391
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/coupon
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-09-08 10:18:01.718
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/coupon
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-09-08 10:18:10.970
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/coupon
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-09-08 10:18:11.600
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/coupon
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-09-08 10:18:12.212
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/coupon
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-09-08 10:18:12.885
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/coupon
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-09-08 10:18:13.866
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/coupon
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-09-08 10:18:14.433
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/coupon
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-09-08 10:18:25.926
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/coupon
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-09-08 10:18:26.508
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/coupon
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-09-08 10:18:26.832
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/coupon
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-09-08 10:18:28.433
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/coupon
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-09-08 10:18:29.069
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/coupon
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-09-08 10:18:30.012
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/coupon
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-09-08 10:18:30.848
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/coupon
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-09-08 10:18:31.984
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/coupon
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-09-08 10:18:33.000
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/coupon
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-09-08 10:18:33.817
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/coupon
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2024-09-08 10:18:34.886
+!MESSAGE IPackageFragmentRoot is missing, skipping javadoc/source attachment for project P/coupon
+
+!ENTRY org.eclipse.core.jobs 4 2 2024-09-08 10:24:33.895
+!MESSAGE An internal error occurred during: "Download sources and javadoc".
+!STACK 0
+java.lang.IllegalStateException: m2e is shut down!
+	at org.eclipse.m2e.core.embedder.IMavenConfiguration.getWorkspaceConfiguration(IMavenConfiguration.java:142)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.newExecutionRequest(MavenExecutionContext.java:156)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:305)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.embedder.IMaven.execute(IMaven.java:300)
+	at org.eclipse.m2e.jdt.internal.DownloadSourcesJob.run(DownloadSourcesJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.resources 2 10035 2024-09-08 10:24:34.261
+!MESSAGE The workspace will exit with unsaved changes in this session.
+!SESSION 2024-09-08 10:24:36.173 -----------------------------------------------
+eclipse.buildId=4.32.0.20240606-1231
+java.version=22.0.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_IN
+Framework arguments:  plugins/lombok.jar -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 plugins/lombok.jar -product org.eclipse.epp.package.jee.product
+
+!ENTRY ch.qos.logback.classic 1 0 2024-09-08 10:24:41.144
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY org.eclipse.core.resources 2 10035 2024-09-08 10:24:44.769
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY ch.qos.logback.classic 1 0 2024-09-08 10:24:45.350
+!MESSAGE Logback config file: /home/v2stech/Documents/CouponManagementSystem/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.6.1.20240411-1122.xml
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-09-08 10:25:30.109
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/application-client_9.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-09-08 10:25:30.110
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/jobXML_2_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-09-08 10:25:30.110
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-09-08 10:25:30.111
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-09-08 10:25:30.116
+!MESSAGE The given URI https://jakarta.ee/xml/ns/validation/validation-configuration-3.0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-09-08 10:25:30.119
+!MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
