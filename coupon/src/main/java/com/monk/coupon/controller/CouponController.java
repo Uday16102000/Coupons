@@ -102,8 +102,8 @@ public class CouponController {
 
 		ApplicableCouponResponse applicableCouponResponse=couponService.getAllApplicableCoupons(applicableCouponRequest);
 		
-		 CouponParentResponse couponParentResponse= new CouponParentResponse();
-		 ParentResponse parentResponse = couponParentResponse;
+		
+		 ParentResponse parentResponse = applicableCouponResponse;
 			parentResponse.setMessage(MonkSuccessMessage.COUPONS_FETCHED_SUCCESSFULLY);
 
 			parentResponse.setCode(HttpStatus.OK.value());

@@ -10,7 +10,7 @@ import jakarta.validation.constraints.NotNull;
 public class Cart {
 	
 	@NotEmpty(message="Cart  Items Cannot Be Empty")
-	@JsonProperty(value="cart")
+	@JsonProperty(value="items")
 	List<Items> items;
 
 	public List<Items> getItems() {

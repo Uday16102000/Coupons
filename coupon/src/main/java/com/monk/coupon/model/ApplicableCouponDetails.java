@@ -1,7 +1,10 @@
 package com.monk.coupon.model;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+@JsonInclude(Include.NON_NULL)
 public class ApplicableCouponDetails {
 	
 	@JsonProperty(value="coupon_id")
@@ -12,6 +15,18 @@ public class ApplicableCouponDetails {
 	
 	@JsonProperty(value="discount")
 	private Double discount;
+
+	@JsonProperty(value="offer")
+	private String bxgyOffer;
+	
+	
+	public String getBxgyOffer() {
+		return bxgyOffer;
+	}
+
+	public void setBxgyOffer(String bxgyOffer) {
+		this.bxgyOffer = bxgyOffer;
+	}
 
 	public Long getCouponId() {
 		return couponId;

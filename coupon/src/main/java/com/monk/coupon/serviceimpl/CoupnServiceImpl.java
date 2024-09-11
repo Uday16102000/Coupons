@@ -348,30 +348,81 @@ public class CoupnServiceImpl implements CouponService {
 			productIds.add(item.getProduct_id());
 
 		});
-		
-		List<Product> productList= productRepository.findAllByProductIdInAndIsDeletedFalse(productIds);
-		if(productIds.size() != productIds.size())
-		{
+
+		List<Product> productList = productRepository.findAllByProductIdInAndIsDeletedFalse(productIds);
+		if (productIds.size() != productIds.size()) {
 			throw new MonkException(MonkErrorMessages.FEW_PRODUCT_NOT_AVAILABLE, HttpStatus.BAD_REQUEST);
 		}
-		
-		
-		
 
 		List<Coupon> couponList = couponRepository.findAllByIsDeletedFalse();
-
 
 		List<BuyProduct> buyProductList = buyProductRepository.findAllByProductIdIn(productIds);
 
 		List<GetProdcut> getProdcutList = getProductRepository.findAllByProductIdIn(productIds);
-		
-		List<ApplicableCouponResponse> applicableCouponResponse= new ArrayList<ApplicableCouponResponse>();
-		productList.forEach(product->{
-			ApplicableCouponDetails applicableCouponDetails = new ApplicableCouponDetails();
-            			
-		});
 
-		return null;
+		List<ApplicableCouponDetails> applicableCouponResponse = new ArrayList<ApplicableCouponDetails>();
+		couponList.forEach(coupon -> {
+
+			productList.forEach(product -> {
+				if (product.getCoupons().contains(coupon)) {
+					ApplicableCouponDetails applicableCouponDetails = new ApplicableCouponDetails();
+					applicableCouponDetails.setCouponId(coupon.getCouponId());
+					applicableCouponDetails.setType(coupon.getCouponType());
+					applicableCouponDetails.setDiscount(coupon.getDiscount());
+					applicableCouponResponse.add(applicableCouponDetails);
+
+				}
+			});
+			List<BuyProduct> byList = new ArrayList<>();
+			buyProductList.forEach(by -> {
+				if (by.getCoupon().equals(coupon)) {
+					byList.add(by);
+					
+
+				}
+
+			});
+			List<GetProdcut> gyList = new ArrayList<>();
+			getProdcutList.forEach(gp -> {
+				if (gp.getCoupon().equals(coupon)) {
+
+					gyList.add(gp);
+
+				}
+			});
+			
+				
+				gyList.forEach(g->{
+					final String[] offer = {null};  // Use an array to hold the mutable offer value
+					byList.forEach(b->{
+						if(b.getCoupon().equals(g.getCoupon()))
+						{
+							 offer[0] = "Buy " + b.getQuantity() + " Product of " + b.getProductId();
+					            if (offer[0] != null) {
+					                offer[0] = offer[0] + ',';
+					            }
+						
+					
+						}
+					
+					
+				});
+					ApplicableCouponDetails applicableCouponDetails = new ApplicableCouponDetails();
+					applicableCouponDetails.setCouponId(coupon.getCouponId());
+					applicableCouponDetails.setType(coupon.getCouponType());
+					applicableCouponDetails.setDiscount(coupon.getDiscount() );
+					applicableCouponDetails.setBxgyOffer(offer[0]);
+					
+					applicableCouponResponse.add(applicableCouponDetails);
+		
+				
+			});
+
+		});
+		ApplicableCouponResponse couponResponse = new ApplicableCouponResponse();
+		couponResponse.setApplicableCouponDetails(applicableCouponResponse);
+
+		return couponResponse;
 	}
 
 }
